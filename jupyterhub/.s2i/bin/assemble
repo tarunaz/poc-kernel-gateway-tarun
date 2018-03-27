@@ -25,6 +25,14 @@ jupyter serverextension enable --py nb2kg --sys-prefix
 
 #pip uninstall --yes terminado
 
+ssh-keygen
+
+for host in poc-kernel-gateway-2-kg-1 \
+    poc-kernel-gateway-2-kg-2 \
+    poc-kernel-gateway-2-kg-3; \
+    do ssh-copy-id -i ~/.ssh/id_rsa.pub $host; \
+    done
+
 # Fix up permissions.
 
 fix-permissions /opt/app-root
