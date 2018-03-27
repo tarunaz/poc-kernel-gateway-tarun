@@ -23,7 +23,7 @@ jupyter serverextension enable --py nb2kg --sys-prefix
 
 # Uninstall terminado package so can't create a local terminal.
 
-pip uninstall --yes terminado
+#pip uninstall --yes terminado
 
 # Fix up permissions.
 
