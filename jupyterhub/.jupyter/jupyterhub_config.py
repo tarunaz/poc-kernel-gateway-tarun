@@ -57,7 +57,7 @@ class CustomLocalProcessSpawner(LocalProcessSpawner):
     def user_env(self, env):
         env['USER'] = 'default'
         env['HOME'] = '/opt/app-root/data/%s' % self.user.name
-        env['SHELL'] = '/bin/bash'
+        env['SHELL'] = 'ssh poc-kernel-gateway-2-kg-1'
 
         return env
     
