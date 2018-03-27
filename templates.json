@@ -162,7 +162,7 @@
                         "source": {
                             "type": "Git",
                             "git": {
-                                "uri": "https://github.com/jupyter-on-openshift/poc-kernel-gateway-2.git"
+                                "uri": "https://github.com/tarunaz/poc-kernel-gateway-tarun.git"
                             },
                             "contextDir": "jupyterhub"
                         },
