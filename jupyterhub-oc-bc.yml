@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  labels:
+    build: jupyterhub-oc
+  name: jupyterhub-oc
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: jupyterhub-oc:latest
+  source:
+    dockerfile: |-
+      FROM centos/python-35-centos7
+      USER root
+      RUN curl -o /opt/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/clients/3.6.173.0.96/linux/oc.tar.gz && \
+        tar -xzvf /opt/oc.tar.gz -C /bin
+      USER 1001
+    type: Dockerfile
+  strategy:
+    dockerStrategy:
+      noCache: true
+    type: Docker
+  triggers: []
+
