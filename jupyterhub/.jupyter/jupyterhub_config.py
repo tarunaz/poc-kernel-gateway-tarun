@@ -57,7 +57,7 @@ class CustomLocalProcessSpawner(LocalProcessSpawner):
     def user_env(self, env):
         env['USER'] = 'default'
         env['HOME'] = '/opt/app-root/data/%s' % self.user.name
-        env['SHELL'] = 'oc rsh poc-kernel-gateway-2-kg-1-1-s9pj7'
+        env['SHELL'] = 'oc rsh -t --shell='/bin/bash' poc-kernel-gateway-2-kg-1-1-s9pj7'
 
         return env
     
